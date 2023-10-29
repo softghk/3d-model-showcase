@@ -1,13 +1,12 @@
-import React from "react";
-import ModelViewer from "./components/ModalViewer";
+import { FileUpload } from "./components/FileUpload";
+import { Provider } from "./lib/Provider";
+import "./App.css";
 
 function App() {
-  const modelPath = "/models/AviaryVillage.3dm";
-
   return (
-    <div className="App">
-      <ModelViewer modelPath={modelPath} />
-    </div>
+    <Provider>
+      <FileUpload />
+    </Provider>
   );
 }
 
